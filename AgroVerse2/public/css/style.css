@@ -1,0 +1,400 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f5;
+  color: #333;
+}
+
+/* =========================
+   NAVBAR (ALL PAGES)
+========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2e7d32;
+  padding: 15px 25px;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   HERO SECTION (HOME)
+========================= */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('https://plus.unsplash.com/premium_photo-1664303237074-c0ee4bf8faa6?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  margin: 10px 0 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+  padding: 12px 22px;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.orange { background: #f57c00; }
+.green  { background: #388e3c; }
+.blue   { background: #1976d2; }
+
+/* =========================
+   DASHBOARD / CARDS
+========================= */
+.services {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   FORMS (LOGIN, CROP SELECTION)
+========================= */
+.form-container {
+  max-width: 400px;
+  margin: 80px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-size: 14px;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: #2e7d32;
+}
+
+/* =========================
+   TABLE (MARKET PRICES)
+========================= */
+.table-container {
+  max-width: 800px;
+  margin: 50px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background: #2e7d32;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+/* =========================
+   HOW IT WORKS
+========================= */
+.how-it-works {
+  background: #e8f5e9;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.step {
+  background: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* LOGIN OVERLAY */
+.login-overlay {
+  min-height: 100vh;
+  background: linear-gradient(
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.45)
+  ),
+  url('../assets/images/farm.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LOGIN BOX */
+.login-box {
+  position: relative;
+  background: rgba(255,255,255,0.95);
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+}
+
+.close-btn:hover {
+  color: red;
+}
+
+/* MODAL POPUP */
+.modal {
+  display: none;              /* IMPORTANT */
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 320px;
+}
+
+/* crop selection */
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background: #fff;
+}
+
+.crop-card {
+  max-width: 500px;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.recommend-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  box-shadow: 0 6px 15px rgba(39, 174, 96, 0.3);
+  transition: all 0.3s ease;
+}
+
+.recommend-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(39, 174, 96, 0.4);
+}
+
+.recommend-btn:active {
+  transform: scale(0.98);
+}
+
+/* crop disease setection */
+.disease-card {
+  max-width: 480px;
+}
+
+input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px dashed #aaa;
+  border-radius: 6px;
+  background: #fafafa;
+  cursor: pointer;
+}
+
+.image-preview {
+  margin: 15px 0;
+  text-align: center;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background: #f9f9f9;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 200px;
+  display: none;
+  border-radius: 6px;
+}
+
+#previewText {
+  display: none;          /* 🔴 HIDDEN INITIALLY */
+  font-size: 14px;
+  color: #777;
+}
+
+.detect-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(135deg, #16a085, #1abc9c);
+  box-shadow: 0 6px 15px rgba(26, 188, 156, 0.35);
+  transition: all 0.3s ease;
+}
+
+.detect-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(26, 188, 156, 0.45);
+}
+
+
+
+.login-overlay {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
