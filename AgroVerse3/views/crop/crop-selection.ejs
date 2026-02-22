@@ -1,0 +1,62 @@
+<div class="center-page">
+  <div class="crop-card">
+    
+    <h2>🌱 Smart Crop Selection</h2>
+
+    <form action="/crop/result" method="POST">
+      <label>Season</label>
+  <select name="season" required>
+    <option value="">Select</option>
+    <option value="Kharif">Kharif</option>
+    <option value="Rabi">Rabi</option>
+    <option value="Zaid">Zaid</option>
+  </select>
+
+  <label>Soil Type</label>
+  <select name="soilType" required>
+    <option value="">Select</option>
+    <option value="Black">Black</option>
+    <option value="Red">Red</option>
+    <option value="Alluvial">Alluvial</option>
+  </select>
+
+  <label>Water Level</label>
+  <select name="waterLevel" required>
+    <option value="">Select</option>
+    <option value="Low">Low</option>
+    <option value="Medium">Medium</option>
+    <option value="High">High</option>
+  </select>
+
+  <label>Temperature</label>
+  <select name="temperature" required>
+    <option value="">Select</option>
+    <option value="Below 20">Below 20°C</option>
+    <option value="20-30">20–30°C</option>
+    <option value="Above 30">Above 30°C</option>
+  </select>
+
+  <label>Location</label>
+  <select name="locationType" required>
+    <option value="">Select</option>
+    <option value="Plains">Plains</option>
+    <option value="Hilly">Hilly</option>
+    <option value="Dry">Dry</option>
+  </select>
+
+  <label>Land Size</label>
+  <select name="landSize" required>
+    <option value="">Select</option>
+    <option value="Small">Less than 1 acre</option>
+    <option value="Medium">1–5 acres</option>
+    <option value="Large">More than 5 acres</option>
+  </select>
+
+  <button type="submit">Get Recommendation</button>
+    </form>
+
+  </div>
+</div>
+
+
+

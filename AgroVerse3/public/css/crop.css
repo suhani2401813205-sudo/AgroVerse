@@ -1,0 +1,173 @@
+/* =========================
+   CROP SELECTION / RESULT PAGE
+   (Same Style as Signup Page)
+========================= */
+
+.center-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1b5e20, #2e7d32);
+  padding: 20px;
+}
+
+/* Glass Card */
+.crop-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(15px);
+  padding: 40px 35px;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  color: white;
+  animation: fadeIn 0.6s ease;
+}
+
+/* Heading */
+.crop-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+/* Labels */
+.crop-card label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Select Fields */
+.crop-card select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Focus Effect */
+.crop-card select:focus {
+  box-shadow: 0 0 0 2px #a5d6a7;
+}
+
+/* Button */
+.crop-card button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: white;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.crop-card button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Result Page Styling */
+.crop-card p {
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.crop-card h3 {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #c8f7c5;
+}
+
+/* Try Again Link */
+.crop-card a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #c8e6c9;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.crop-card a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#tryagain {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#tryagain:hover {
+  background: linear-gradient(135deg, #1b5e20, #43a047);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+#tryagain:active {
+  transform: scale(0.98);
+}
+
+
+.result-title {
+  margin-top: 25px;
+  font-size: 20px;
+  color: #2e7d32;
+}
+
+.highlight-crop {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, #66bb6a, #2e7d32);
+  color: #fff;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+  animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
