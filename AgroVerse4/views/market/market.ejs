@@ -1,0 +1,59 @@
+<div class="market-overlay">
+
+  <div class="market-container">
+
+    <h2 id="market-title">Market Price Checker</h2>
+    <p class="market-subtitle">Check latest crop prices in different states</p>
+
+    <form id="market-form" action="/market/check" method="POST">
+      <span class="close-btn" onclick="window.location='/'">✖</span>
+
+      <div class="input-group">
+        <label for="crop">Select Crop</label>
+        <select id="crop" name="crop">
+          <option value="rice">Rice</option>
+          <option value="wheat">Wheat</option>
+          <option value="maize">Maize</option>
+          <option value="cotton">Cotton</option>
+          <option value="onion">Onion</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="state">Select State</label>
+        <select id="state" name="state">
+          <option value="maharashtra">Maharashtra</option>
+          <option value="punjab">Punjab</option>
+          <option value="karnataka">Karnataka</option>
+          <option value="gujarat">Gujarat</option>
+        </select>
+      </div>
+
+      <button class="btn market-btn" type="submit">
+        Check Price
+      </button>
+
+    </form>
+
+    <% if(result){ %>
+
+    <div class="market-result">
+
+      <h3>📊 Market Price Result</h3>
+
+      <p><strong>Crop:</strong> <%= result.crop %></p>
+      <p><strong>State:</strong> <%= result.state %></p>
+
+      <hr>
+
+      <p><strong>Minimum Price:</strong> ₹ <%= result.minPrice %> / Quintal</p>
+      <p><strong>Maximum Price:</strong> ₹ <%= result.maxPrice %> / Quintal</p>
+      <p><strong>Average Price:</strong> ₹ <%= result.avgPrice %> / Quintal</p>
+
+    </div>
+
+    <% } %>
+
+  </div>
+
+</div>

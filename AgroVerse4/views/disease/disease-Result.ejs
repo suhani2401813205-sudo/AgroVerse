@@ -1,0 +1,29 @@
+<div class="center-page">
+  <div class="crop-card">
+
+    <span class="close-btn" onclick="window.location='/'">✖</span>
+
+    <h2>🌿 Crop Disease Detection Result</h2>
+
+    <p><strong>Crop Type:</strong> <%= cropType %></p>
+
+    <p>
+      <strong>Disease Detected:</strong>
+      <span class="highlight-crop"><%= diseaseName %></span>
+    </p>
+
+    <p><strong>Severity Level:</strong> <%= severity %></p>
+
+    <p><strong>Possible Cause:</strong> <%= cause %></p>
+
+    <hr>
+
+    <h3 class="result-title">🩺 Recommended Treatment</h3>
+
+    <p><%= treatment %></p>
+
+    <a href="/disease" id="tryagain">Try Again</a>
+    <a href="/crop" id="tryagain">Crop Recommendation</a>
+
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="schemes-overlay">
+
+  <div class="schemes-container">
+
+    <h2 id="schemes-title">Government Schemes</h2>
+    <p class="schemes-subtitle">Find useful schemes available for farmers</p>
+
+    <form id="schemes-form" action="/scheme/check" method="POST">
+      <span class="close-btn" onclick="window.location='/'">✖</span>
+      <div class="input-group">
+        <label for="scheme">Select Scheme</label>
+
+        <select name="scheme" id="scheme">
+
+          <option value="pmkisan">PM Kisan Samman Nidhi</option>
+          <option value="pmfby">PM Fasal Bima Yojana</option>
+          <option value="kcc">Kisan Credit Card</option>
+          <option value="soil">Soil Health Card</option>
+          <option value="sinchai">PM Krishi Sinchai Yojana</option>
+
+        </select>
+      </div>
+
+      <button type="submit" class="btn scheme-btn">
+        View Scheme
+      </button>
+
+    </form>
+
+    <% if(result){ %>
+
+    <div class="scheme-result">
+
+      <h3>🏛 Scheme Details</h3>
+
+      <p><strong>Scheme Name:</strong> <%= result.name %></p>
+
+      <hr>
+
+      <p><strong>Description:</strong> <%= result.description %></p>
+
+      <p><strong>Benefits:</strong> <%= result.benefits %></p>
+
+      <p><strong>Eligibility:</strong> <%= result.eligibility %></p>
+
+    </div>
+
+    <% } %>
+
+  </div>
+
+</div>
